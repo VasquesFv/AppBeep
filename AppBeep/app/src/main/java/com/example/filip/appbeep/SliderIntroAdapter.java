@@ -18,7 +18,7 @@ public class SliderIntroAdapter extends PagerAdapter {
     //list of images
 
     public int[] list_images = {
-            R.drawable.img05,
+            R.drawable.beeimg,
             R.drawable.img02,
             R.drawable.img03,
             R.drawable.img04
