@@ -21,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewpager);
         myadapter = new SliderIntroAdapter(this);
         viewPager.setAdapter(myadapter);
+
     }
-
-
-
 
 }

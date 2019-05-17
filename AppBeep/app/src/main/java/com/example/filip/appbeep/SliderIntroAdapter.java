@@ -3,12 +3,12 @@ package com.example.filip.appbeep;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class SliderIntroAdapter extends PagerAdapter {
@@ -18,12 +18,25 @@ public class SliderIntroAdapter extends PagerAdapter {
     //list of images
 
     public int[] list_images = {
-            R.drawable.beeimg,
-            R.drawable.img02,
-            R.drawable.img03,
-            R.drawable.img04
+            R.drawable.logo,
+            R.drawable.logo,
+            R.drawable.logo,
+            R.drawable.logo
     };
 
+    public String[] list_titles = {
+            "Seja ouvido com o Beep",
+            "Ganhe pontos para trocar como quiser",
+            "Acompanhe seus principais programas",
+            "Analise de imagem com IA"
+    };
+
+    public String[] list_descriptions = {
+            "Com apenas 2 clicks voce avalia sua emissora",
+            "com os beepoints voce pode conseguir cupom de descontos em varios servicos",
+            "Com o Beep voce pode ficar sempre a par da programacao da sua emissora favorita",
+            "o Beep reconhece sozinho atraves de IA a emissora que esta assistindo"
+    };
 
 
     public SliderIntroAdapter (Context context) {
@@ -42,10 +55,15 @@ public class SliderIntroAdapter extends PagerAdapter {
 
     public Object instantiateItem(ViewGroup container, int position) {
         inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.slide,container,false);
+        View view = inflater.inflate(R.layout.slider_intro,container,false);
         LinearLayout layoutslide = (LinearLayout) view.findViewById(R.id.slidelinearlayout);
         ImageView imgslide = (ImageView) view.findViewById(R.id.slideimage);
         imgslide.setImageResource(list_images[position]);
+        TextView textitle = (TextView) view.findViewById(R.id.textitle);
+        textitle.setText(list_titles[position]);
+        TextView textdescription = (TextView) view.findViewById(R.id.textdescription);
+        textdescription.setText(list_descriptions[position]);
+
         container.addView(view);
         return view;
     }
