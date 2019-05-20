@@ -4,15 +4,12 @@ package com.example.filip.appbeep;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.widget.LinearLayout;
 import com.rd.PageIndicatorView;
-
 
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private SliderIntroAdapter myadapter;
-
 
     @Override
     protected  void onCreate (Bundle savedInstancesState){
