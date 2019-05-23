@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".Register"
+             android:background="#000000">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/textRegisterName"
+            android:hint="Nome"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:textColorHint="#FFC107"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/emailUser"
+            android:hint="Email"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center" android:textColorHint="#FFC107"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/dateBorn"
+            android:hint="Data de nascimento"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center" android:textColorHint="#FFC107"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/cellphone"
+            android:hint="Telefone"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center"
+            android:textColorHint="#FFC107"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/buttoncontinue"/>
+
+
+</FrameLayout>

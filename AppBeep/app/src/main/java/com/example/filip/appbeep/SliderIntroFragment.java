@@ -1,6 +1,5 @@
 package com.example.filip.appbeep;
 
-
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,16 +21,20 @@ public class SliderIntroFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_slider_intro, container,false);
     }
 
-    public static SliderIntroFragment newInstance(final String textitle, String textdescription, int slideimage) {
+
+
+    public static SliderIntroFragment newInstance(final String textitle, String textdescription, int slideimage, boolean Boolean) {
         final SliderIntroFragment myFragment = new SliderIntroFragment();
         Bundle bundle = new Bundle();
+        bundle.putBoolean("boolean", Boolean);
         bundle.putInt("image",slideimage);
         bundle.putString("title", textitle);
         bundle.putString("description",textdescription);
         myFragment.setArguments(bundle);
         return myFragment;
-
     }
+
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -43,18 +46,17 @@ public class SliderIntroFragment extends Fragment {
         Button buttonLogin = view.findViewById(R.id.btnLogin);
 
         Bundle bundle = getArguments();
-
         int slideimage = bundle.getInt("image", R.drawable.logo);
         String textitle = bundle.getString("title");
         String textdescription = bundle.getString("description");
-
+        Boolean Boolean = bundle.getBoolean("boolean");
 
         title.setText(textitle);
         description.setText(textdescription);
         image.setImageDrawable(getResources().getDrawable(slideimage));
 
-        buttonLogin.setVisibility(view.VISIBLE);
+        if(!Boolean) { buttonLogin.setVisibility(view.GONE);
+        }
 
     }
-
 }
