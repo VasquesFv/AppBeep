@@ -14,13 +14,14 @@ import android.widget.TextView;
 
 public class SliderIntroFragment extends Fragment {
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         super.onCreateView(inflater,container,savedInstanceState);
         return inflater.inflate(R.layout.fragment_slider_intro, container,false);
-    }
 
+    }
 
 
     public static SliderIntroFragment newInstance(final String textitle, String textdescription, int slideimage, boolean Boolean) {
@@ -32,8 +33,8 @@ public class SliderIntroFragment extends Fragment {
         bundle.putString("description",textdescription);
         myFragment.setArguments(bundle);
         return myFragment;
-    }
 
+    }
 
 
     @Override
@@ -43,7 +44,7 @@ public class SliderIntroFragment extends Fragment {
         TextView title = view.findViewById(R.id.textitle);
         TextView description = view.findViewById(R.id.textdescription);
         ImageView image = view.findViewById(R.id.slideimage);
-        Button buttonLogin = view.findViewById(R.id.btnLogin);
+        Button buttonLogin = view.findViewById(R.id.btnCadaster);
 
         Bundle bundle = getArguments();
         int slideimage = bundle.getInt("image", R.drawable.logo);
@@ -56,7 +57,10 @@ public class SliderIntroFragment extends Fragment {
         image.setImageDrawable(getResources().getDrawable(slideimage));
 
         if(!Boolean) { buttonLogin.setVisibility(view.GONE);
-        }
 
+
+        }
     }
 }
+
+
