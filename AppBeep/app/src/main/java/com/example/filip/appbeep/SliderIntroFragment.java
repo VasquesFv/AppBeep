@@ -1,5 +1,6 @@
 package com.example.filip.appbeep;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -44,7 +45,7 @@ public class SliderIntroFragment extends Fragment {
         TextView title = view.findViewById(R.id.textitle);
         TextView description = view.findViewById(R.id.textdescription);
         ImageView image = view.findViewById(R.id.slideimage);
-        Button buttonLogin = view.findViewById(R.id.btnCadaster);
+        Button buttonCadaster = view.findViewById(R.id.btnCadaster);
 
         Bundle bundle = getArguments();
         int slideimage = bundle.getInt("image", R.drawable.logo);
@@ -56,9 +57,17 @@ public class SliderIntroFragment extends Fragment {
         description.setText(textdescription);
         image.setImageDrawable(getResources().getDrawable(slideimage));
 
-        if(!Boolean) { buttonLogin.setVisibility(view.GONE);
+        if(!Boolean) { buttonCadaster.setVisibility(View.GONE);
 
+        buttonCadaster.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Register.class);
+                startActivity(intent);
+
+            }
+        });
         }
     }
 }
