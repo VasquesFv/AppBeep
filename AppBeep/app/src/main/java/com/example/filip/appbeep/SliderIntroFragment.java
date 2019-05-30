@@ -45,7 +45,7 @@ public class SliderIntroFragment extends Fragment {
         TextView title = view.findViewById(R.id.textitle);
         TextView description = view.findViewById(R.id.textdescription);
         ImageView image = view.findViewById(R.id.slideimage);
-        Button buttonCadaster = view.findViewById(R.id.btnCadaster);
+        Button btnCadaster = view.findViewById(R.id.btnCadaster);
 
         Bundle bundle = getArguments();
         int slideimage = bundle.getInt("image", R.drawable.logo);
@@ -57,9 +57,9 @@ public class SliderIntroFragment extends Fragment {
         description.setText(textdescription);
         image.setImageDrawable(getResources().getDrawable(slideimage));
 
-        if(bosta) {buttonCadaster.setVisibility(View.VISIBLE);
+        if(bosta) {btnCadaster.setVisibility(View.VISIBLE);
 
-        buttonCadaster.setOnClickListener(new View.OnClickListener() {
+        btnCadaster.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
