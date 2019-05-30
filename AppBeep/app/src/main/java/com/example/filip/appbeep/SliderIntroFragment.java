@@ -51,21 +51,21 @@ public class SliderIntroFragment extends Fragment {
         int slideimage = bundle.getInt("image", R.drawable.logo);
         String textitle = bundle.getString("title");
         String textdescription = bundle.getString("description");
-        Boolean Boolean = bundle.getBoolean("boolean");
+        boolean bosta = bundle.getBoolean("boolean");
 
         title.setText(textitle);
         description.setText(textdescription);
         image.setImageDrawable(getResources().getDrawable(slideimage));
 
-        if(!Boolean) { buttonCadaster.setVisibility(View.GONE);
+        if(bosta) {buttonCadaster.setVisibility(View.VISIBLE);
 
         buttonCadaster.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), Register.class);
+                Intent intent = new Intent(getContext(), RegisterActivity.class);
                 startActivity(intent);
-
+                getActivity().finish();
             }
         });
         }
