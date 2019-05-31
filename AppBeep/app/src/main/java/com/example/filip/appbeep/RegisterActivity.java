@@ -10,8 +10,6 @@ import android.widget.Button;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private Button buttonContinue;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

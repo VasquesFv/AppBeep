@@ -3,7 +3,9 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".Home">
+             tools:context=".HomeActivity">
+
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
 
     <RelativeLayout
             android:layout_width="wrap_content"
@@ -131,7 +133,7 @@
                 android:src="@drawable/imgrecognize"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
-                android:id="@+id/recognizebutton"
+                android:id="@+id/buttonRecognize"
                 android:layout_centerHorizontal="true"/>
 
         <ImageView

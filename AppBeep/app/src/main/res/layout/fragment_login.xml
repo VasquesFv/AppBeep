@@ -39,7 +39,7 @@
             android:drawableRight="@drawable/ic_eye_white"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/userName"/>
-    
+
     <Button
             android:layout_width="250dp"
             android:layout_height="50dp"
@@ -49,7 +49,7 @@
             android:text="Entrar"
             android:textSize="15sp"
             android:id="@+id/btnStartSession"
-            android:background="@drawable/btnstartsession"/>
+            android:background="@drawable/rectangle"/>
 
     <TextView
             android:layout_width="wrap_content"
