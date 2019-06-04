@@ -130,8 +130,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/walleticon"
-                android:layout_marginStart="20dp"
                 android:layout_marginTop="55dp"
+                android:layout_marginStart="18dp"
                 android:id="@+id/walletbutton"/>
 
         <ImageView
@@ -150,7 +150,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="90dp"
                 android:layout_centerHorizontal="true"/>
-
 
     </RelativeLayout>
 
