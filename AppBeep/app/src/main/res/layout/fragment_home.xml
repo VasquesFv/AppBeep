@@ -1,19 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/m_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:elevation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/card_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".HomeActivity">
+                android:layout_marginTop="350dp"
+                android:padding="8dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways">
 
     <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_scrollFlags="scroll|enterAlways">
 
         <ImageView
                 android:src="@drawable/headerhome"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:id="@+id/img_topbar"
+                app:layout_scrollFlags="scroll|enterAlways"/>
 
         <ProgressBar
                 android:layout_width="380dp"
@@ -22,7 +62,8 @@
                 android:indeterminateTint="#ffffff"
                 android:progressBackgroundTint="#ffffff"
                 android:layout_marginTop="80dp"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                app:layout_scrollFlags="scroll|enterAlways"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -31,7 +72,8 @@
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="110dp"/>
+                android:layout_marginTop="110dp"
+                app:layout_scrollFlags="scroll|enterAlways"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -40,14 +82,16 @@
                 android:textSize="24dp"
                 android:textColor="#ffffff"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="140dp"/>
+                android:layout_marginTop="140dp"
+                app:layout_scrollFlags="scroll|enterAlways"/>
 
         <ImageView
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/backgroundcircle"
                 android:layout_marginTop="110dp"
-                android:layout_marginStart="285dp"/>
+                android:layout_marginStart="285dp"
+                app:layout_scrollFlags="scroll|enterAlways"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
@@ -55,19 +99,22 @@
                 android:layout_height="91dp"
                 android:src="@drawable/alessandrobeep"
                 android:layout_marginTop="120dp"
-                android:layout_marginStart="295dp"/>
+                android:layout_marginStart="295dp"
+                app:layout_scrollFlags="scroll|enterAlways"/>
 
         <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/imgmedal"
                 android:layout_marginTop="160dp"
-                android:layout_marginStart="290dp"/>
+                android:layout_marginStart="290dp"
+        app:layout_scrollFlags="scroll|enterAlways"/>
 
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginTop="200dp">
+                android:layout_marginTop="200dp"
+                app:layout_scrollFlags="scroll|enterAlways">
 
             <ProgressBar
                     android:layout_width="60dp"
@@ -96,15 +143,6 @@
         </RelativeLayout>
 
     </RelativeLayout>
-
-    <android.support.v7.widget.RecyclerView
-            android:id="@+id/card_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="350dp"
-            android:padding="8dp">
-
-    </android.support.v7.widget.RecyclerView>
 
     <RelativeLayout
             android:layout_width="match_parent"
@@ -154,4 +192,6 @@
 
     </RelativeLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

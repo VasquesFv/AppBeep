@@ -1,19 +1,22 @@
 package com.example.filip.appbeep;
 
-import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import java.util.List;
+        import android.content.Context;
+        import android.support.annotation.NonNull;
+        import android.support.v7.widget.RecyclerView;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.ImageView;
+        import android.widget.TextView;
+        import android.widget.Toolbar;
+
+        import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.myViewHolder> {
 
     Context mContext;
     List<ItemCardView> mData;
+    Toolbar mToolbar;
 
     public HomeAdapter(Context mContext, List<ItemCardView> mData) {
         this.mContext = mContext;
@@ -26,6 +29,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.myViewHolder> 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View v = inflater.inflate(R.layout.card_item,viewGroup,false);
         return new myViewHolder(v);
+
     }
 
     @Override
@@ -54,6 +58,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.myViewHolder> 
             background_img =itemView.findViewById(R.id.card_background);
             text_gen=itemView.findViewById(R.id.card_gen);
             text_tite=itemView.findViewById(R.id.card_title);
+
 
         }
     }
