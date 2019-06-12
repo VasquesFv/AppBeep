@@ -97,10 +97,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="220dp"
-                    app:layout_scrollFlags="scroll|enterAlways"
-                    android:layout_centerHorizontal="true">
+                    android:layout_centerHorizontal="true"
+                    app:layout_scrollFlags="scroll|enterAlways">
 
                 <ProgressBar
+                        app:layout_scrollFlags="scroll|enterAlways"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         style="?android:attr/progressBarStyleLarge"
@@ -109,6 +110,7 @@
                         android:layout_marginTop="60dp"/>
 
                 <ProgressBar
+                        app:layout_scrollFlags="scroll|enterAlways"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         style="?android:attr/progressBarStyleLarge"
@@ -117,6 +119,7 @@
                         android:layout_marginTop="35dp"/>
 
                 <ProgressBar
+                        app:layout_scrollFlags="scroll|enterAlways"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         style="?android:attr/progressBarStyleLarge"

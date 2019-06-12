@@ -27,7 +27,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.myViewHolder> 
     public HomeAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View v = inflater.inflate(R.layout.card_item,viewGroup,false);
+        View v = inflater.inflate(R.layout.card_item2,viewGroup,false);
         return new myViewHolder(v);
 
     }
