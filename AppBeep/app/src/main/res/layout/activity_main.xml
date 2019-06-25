@@ -9,6 +9,12 @@
         tools:context=".MainActivity"
         android:orientation="vertical">
 
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="435dp"
+            android:src="@drawable/waves"
+            android:layout_alignParentBottom="true"/>
+
 
     <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"
@@ -17,36 +23,35 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
-            android:layout_marginBottom="0dp"
-            android:background="@drawable/background">
+            android:layout_marginBottom="0dp">
+
     </android.support.v4.view.ViewPager>
 
-    <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignBottom="@id/viewpager"
-            android:layout_marginBottom="50dp">
-
-        <com.rd.PageIndicatorView
-                android:id="@+id/pageIndicatorView"
+        <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:piv_animationType="thinWorm"
-                app:piv_dynamicCount="true"
-                app:piv_interactiveAnimation="true"
-                app:piv_selectedColor="@color/cardview_light_background"
-                app:piv_unselectedColor="@color/cardview_dark_background"
-                app:piv_viewPager="@id/viewpager"
-                attrs:piv_padding="12dp"
-                attrs:piv_radius="8dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@id/viewpager"
+                android:layout_marginBottom="50dp">
+
+            <com.rd.PageIndicatorView
+                    android:id="@+id/pageIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:piv_animationType="thinWorm"
+                    app:piv_dynamicCount="true"
+                    app:piv_interactiveAnimation="true"
+                    app:piv_selectedColor="@color/cardview_light_background"
+                    app:piv_unselectedColor="@color/cardview_dark_background"
+                    app:piv_viewPager="@id/viewpager"
+                    attrs:piv_padding="12dp"
+                    attrs:piv_radius="8dp"/>
+
+        </RelativeLayout>
 
 
-    </RelativeLayout>
 
-
-
-    </RelativeLayout>
+</RelativeLayout>
 
 
 

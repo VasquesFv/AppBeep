@@ -39,11 +39,11 @@ public class HomeActivity extends AppCompatActivity {
 
         mList.add(new ItemCardView(R.drawable.a,"Globo Esporte", "Noticias, Esportes"));
         mList.add(new ItemCardView(R.drawable.b,"Acelerados","Noticias, Automovel"));
-        mList.add(new ItemCardView(R.drawable.c,"",""));
-        mList.add(new ItemCardView(R.drawable.d,"",""));
-        mList.add(new ItemCardView(R.drawable.e,"",""));
-        mList.add(new ItemCardView(R.drawable.f,"",""));
-        mList.add(new ItemCardView(R.drawable.g,"",""));
+        mList.add(new ItemCardView(R.drawable.c,"Globo Esporte","Noticias, Esportes"));
+        mList.add(new ItemCardView(R.drawable.d,"Acelerados","Noticias, Automovel"));
+        mList.add(new ItemCardView(R.drawable.e,"Globo Esporte","Noticias, Esportes"));
+        mList.add(new ItemCardView(R.drawable.f,"Acelerados","Noticias, Automovel"));
+        mList.add(new ItemCardView(R.drawable.g,"Globo Esporte","Noticias, Esportes"));
 
         HomeAdapter adapter = new HomeAdapter(this,mList);
         recyclerView.setAdapter(adapter);
